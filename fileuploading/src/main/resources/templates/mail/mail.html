@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Not Inserted</title>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+<style>
+
+</style>
+</head>
+<body>
+	<div class="contaier-fluid">
+		<div class="row justify-content-center">
+			<div class="col-8 shadow rounded p-3">
+				<p class="h5"></p>
+				<p>
+					<tr th:each="student: ${data}">
+						<td th:text="${student.msn}" />
+						<td th:text="${student.gtin}" />
+						<td th:text="${student.identifierExists}" />
+						<td th:text="${student.customLabel2}" />
+						<td th:text="${student.customLabel3}" />
+						<td th:text="${student.customLabel4}" />
+						<td th:text="${student.promotionId}" />
+						<td th:text="${student.isGoogleActive}" />
+						<td th:text="${student.isFacebookActive}" />
+						<td th:text="${student.isCriteoActive}" />
+						<td th:text="${student.availability}" />
+					</tr>
+				</p>
+				
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>
